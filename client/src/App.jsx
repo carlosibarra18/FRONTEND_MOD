@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormCalculo from './components/FormCalculo';
 import Grafico from './components/Grafico';
-import "./app.css"
+import "./App.css"
 function App() {
   const [resultado, setResultado] = useState(null);
   const [datosGrafico, setDatosGrafico] = useState(null);
