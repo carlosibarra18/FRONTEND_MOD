@@ -13,13 +13,13 @@ const FormCalculo = ({ onResultado, onDatosGrafico }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/calcular-q/', 
+        'https://backend-mod-967t.onrender.com/api/calcular-q/', 
         inputs
       );
       onResultado(response.data);
       
       const simResponse = await axios.post(
-        'http://localhost:8000/api/simular-h/', 
+        'https://backend-mod-967t.onrender.com/api/simular-h/', 
         { ...inputs, Q: response.data.Q }
       );
       onDatosGrafico(simResponse.data);
